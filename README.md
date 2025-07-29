@@ -1,10 +1,51 @@
-# Telcommunication__Customer_project
+# 📊 Exploratory Data Analysis (EDA) on Telecommunication Customer Churn using MySQL
+
+This project showcases my SQL-based Exploratory Data Analysis (EDA) skills using a customer churn dataset from a telecommunication company. The goal was to identify patterns in customer behavior, segment churn trends by contract types, and derive actionable insights for improving customer retention.
+
+## 🎯 Project Objective
+As part of my data analytics learning, I explored a telecom dataset using MySQL to understand why customers leave the service (churn). I focused on contract types to see which group had the highest churn rate and how retention strategies could be improved.
+
+## 📂 Dataset Summary
+Realistic customer data from a telecom company
+
+Includes fields such as:
+
+* customerID
+* Service Availability
+* Contract (Month-to-month, One year, Two year)
+
+* MonthlyCharges, Churn, tenure, etc.
+
+## ⚙️ Tools & Technologies Used
+* MySQL for data querying and transformation
+
+* CTEs (Common Table Expressions) for modular analysis
+
+* JOINs and Aggregations for combining insights
+
+## 🔍 My Analysis Approach
+I divided my SQL analysis into multiple logical steps using CTEs to make it clean and efficient.
+
+✅ Step-by-step SQL Logic:
+* Counted total number of customers per Contract type.
+
+* Calculated how many customers churned (Churn = 1) and how many were retained (Churn = 0).
+
+* Used LEFT JOINs to merge CTEs into a single output.
+
+* Calculated churn rate (%) using SQL arithmetic.
+* Summarized the output into a table for insights.
+
+| Contract Type  | Total Customers | Churned Customers | Retained Customers | Churn Rate (%) |
+| -------------- | --------------- | ----------------- | ------------------ | -------------- |
+| Month-to-month | 3875            | 1655              | 2220               | 42.73%         |
+| One year       | 1470            | 174               | 1296               | 11.83%         |
+| Two year       | 1695            | 131               | 1564               | 7.73%          |
 
 
+## 📸 MySQL Screenshot
 
-
-
-MySQL
+Below is the actual result of my SQL query executed in MySQL Workbench. It shows remove duplicate fro data celaning, total customers,phone service availablity,Multiple Line Availability,customer and their totalchagers with respect to contract, churned customers, retained customers, and churn rate by contract type:
 
 ### check duplicate value:
 ```mysql
@@ -155,4 +196,22 @@ LEFT JOIN cte_retain AS retain ON total.contract = retain.contract;
 
 <img width="283" height="91" alt="t10" src="https://github.com/user-attachments/assets/aa6ec748-d58d-4231-885a-9e57d50c765f" />
 
+## 📈 Insights & Findings
+* Month-to-month contract customers have the highest churn rate — over 42%
+
+* Customers on One year and Two year contracts have significantly lower churn
+
+* Customers with long-term contracts are more loyal, possibly due to commitment or discounted plans
+
+## 💡 Business Impact
+* Telecom companies can focus retention efforts on month-to-month customers
+
+* Offering discounts, loyalty programs, or upgrades might reduce churn
+
+* Strategic segmentation like this helps improve customer lifetime value
+
+
+🙋‍♂️ About Me
+My name is Asif Ali, and I'm passionate about data analytics in business and telecom environments.
+This project reflects my ability to apply SQL for real-world data analysis and support strategic decision-making.
 
